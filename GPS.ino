@@ -6,9 +6,9 @@
 TinyGPSPlus gps;
 SoftwareSerial mygps(D2,D1); // GPS Tx Pin NodeMCU D2 - GPS Rx Pin NodeMCU D1
 
-#define _SSID "gnet-"          // Your WiFi SSID
-#define _PASSWORD "73409415"   // Your WiFi Password
-#define REFERENCE_URL "https://naro-1f6ae-default-rtdb.firebaseio.com"  // Your Firebase project reference URL
+#define _SSID "-----"          // Your WiFi SSID
+#define _PASSWORD "-----"   // Your WiFi Password
+#define REFERENCE_URL "https:----------.firebaseio.com"  // Your Firebase project reference URL
 
 Firebase firebase(REFERENCE_URL);
 
@@ -148,7 +148,7 @@ void displayInfo() {
       //latBuffer = "";
      // longBuffer = "";
     }
-
+    
     firebase.setInt("Latitude *10^6", Lati);
     firebase.setInt("Longitude *10^6", Long);
     firebase.setFloat("SPEED", velocity);
